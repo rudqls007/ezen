@@ -12,9 +12,20 @@
 #        - 이때 각 문자열의 순서를 인덱스라고 한다
 #        - 첫번째 순서는 0으로 시작한다 ( 1이 아님)
 #        - -1 인덱스 : 가장 마지막 인덱스, -2 : 마지막에서 두번째 인덱스를 의미한다.
+#        - 문자열 slicing
+#           - 인덱스가 하나의 문자만을 추출한다.
+#           - slicing은 부분 문자열을 추출한다.
+#           - [시작 : 끝]에 해당하는 부분 문자열을 추출한다.
+#        - 문자열 함수
+#           - format()
+#               - 문자열 내의 특정한 값을 변수로부터 초기화하여 동적으로 문자열을 생성할 수 있는 기능이있다.
+
+
+
 # 불린형 - 참 또는 거짓 (true or false)
 # None - 아무런 값을 갖지 않을 때 사용
 #        해당 변수가 초기값을 갖지 않게 하여 생성할 때 사용한다.
+
 
 '''
     print()
@@ -61,7 +72,23 @@ e = '''
 print(d)
 print(e)
 
-f = 'Hello World'
+f ='Hello World'
 print(f[10])
 print(f[0])
 print(f[-10])
+print(f[-11])
+#print(f[11])           범위를 넘어갈 경우 에러 발생
+print(f[0:11])
+print(f[0:1])
+print(f[:5])
+print(f[3:])
+print(f[:])
+
+print(f.upper())
+print(f.replace('H', 'j'))  # 문자 바꿈
+
+temperature = 15.5
+prob = 50.0
+
+g = '오늘 기온{}도 이고, 비 올 확률은 {}% 입니다.'.format(temperature, prob)
+print(g)
